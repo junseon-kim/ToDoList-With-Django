@@ -79,6 +79,14 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
+    # 'default': {
+    #     'ENGINE': 'djongo',
+    #     'NAME': 'junseonfirst',
+    #     'HOST' : 'mongodb+srv://rhrhrkfl:rlawns%2425@junseonfirst-o8wgi.gcp.mongodb.net/test?retryWrites=true&w=majority',
+    #     'USER' : 'rhrhrkfl',
+  #       'PASSWORD': 'rlawns$25',
+  # # mongodb+srv://rhrhrkfl:rlawns%2425@junseonfirst-o8wgi.gcp.mongodb.net/test?retryWrites=true&w=majority
+#     }
 }
 
 
@@ -119,3 +127,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# For SQLite, this runs the sqlite3 command-line client
