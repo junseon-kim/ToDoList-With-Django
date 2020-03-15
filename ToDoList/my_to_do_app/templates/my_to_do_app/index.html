@@ -54,6 +54,7 @@
             <div class="toDoDiv">
                 <ul class="list-group">
                     {% for todo in todos %}
+                    {% if todo.isDone == False %}
                     <form action="./deleteTodo/" method="GET">
                         <div class="input-group" name='todo1'>
                             <li class="list-group-item">{{ todo.content }}</li>
@@ -63,10 +64,15 @@
                             </span>
                         </div>
                     </form>
+                    {% endif %}
                     {% endfor %}
                 </ul>
             </div>
         </div>
+
+        <form action="./alldelTodo/" method="GET">
+            <button type="submit">전부 삭제</button>
+        </form>
         <div class="panel-footer">
             실전예제로 배우는 Django. Project1-TodoList
         </div>

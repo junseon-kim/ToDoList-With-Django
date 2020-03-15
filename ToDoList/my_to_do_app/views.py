@@ -23,5 +23,14 @@ def doneTodo(request):
     done_todo_id = request.GET['todoNum']
     print('완료한 todo의 id', done_todo_id)
     todo = Todo.objects.get(id= done_todo_id)
-    todo.delete()
+    todo.isDone = True
+    todo.save()
     return HttpResponseRedirect(reverse('index'))
+
+
+def deleteTodo(request):
+    todo = Todo.objects.all()
+    todo.delete()
+    print('모든 메모가 삭제되었습니다.')
+    return HttpResponseRedirect(reverse('index'))
+
